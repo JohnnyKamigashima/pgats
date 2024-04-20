@@ -4,7 +4,7 @@ const { validaAltura } = require('../../src/exercicio01/funcoes/altura')
 const { imc } = require('../../src/exercicio01/funcoes/imc')
 const { validaPesoValido } = require('../../src/exercicio01/funcoes/peso')
 
-context('Teste de exercício 01', () => {
+describe('Teste de exercício 01', () => {
     describe('Teste se o validador de idade funciona', () => {
         const data = [[19, false], [20, true], [60, true], [61, false]]
         data.forEach((dado) => {
