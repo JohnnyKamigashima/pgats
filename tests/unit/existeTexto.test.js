@@ -23,7 +23,7 @@ context('Deve testar a funcao de existe texto dentro de uma array', () => {
         ]
 
         for (let item of itemAProcurar) {
-            it(`Testa se existe o texto ${item} dentro da array`, () => {
+            it(`Testa se ${item[1] ? 'existe' : 'nao existe'} o texto ${item[0]} dentro da array`, () => {
                 assert.equal(existeTexto(listaItens, item[0]), item[1])
             })
         }
