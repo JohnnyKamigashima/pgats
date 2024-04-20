@@ -1,4 +1,4 @@
-const { Builder, Browser, WebDriver, By } = require('selenium-webdriver')
+const { Builder, Browser, By } = require('selenium-webdriver')
 const { describe, it } = require('mocha')
 const assert = require('node:assert')
 

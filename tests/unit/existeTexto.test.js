@@ -1,7 +1,7 @@
 const assert = require('assert')
 const { existeTexto } = require('../../src/exercicio01/funcoes/existeTexto')
 
-context('Deve testar a funcao de existe texto dentro de uma array', () => {
+describe('Deve testar a funcao de existe texto dentro de uma array', () => {
     describe('Testa a funcao existeTexto passando uma array e um string', () => {
         const listaItens = [
             'Playstation 3',
