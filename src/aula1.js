@@ -1,4 +1,4 @@
-const listaMensagens: string[] = [
+const listaMensagens : string[] = [
     'Hello World!',
     'Hello Tests',
     'Hello Hello!',
