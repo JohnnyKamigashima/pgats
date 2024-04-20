@@ -48,35 +48,43 @@ const tabelaDeImc = [
 let idadePessoa, peso, altura;
 
 // Obtem parametros de execucao se existitem
-const argumentos = process.argv.slice(2);
+if (process.argv[2]) {
+    const argumentos = JSON.parse(process.argv[2]);
 
-if (argumentos.length < 3) {
-    console.log('Os parametros sao: idade, altura e peso da pessoa, será usado valores padrões');
-} else if (argumentos.length == 3) {
-    idadePessoa = corrigeNumero(argumentos[0]);
-    altura = argumentos[1];
-    peso = argumentos[2];
+    if (argumentos.idade) idadePessoa = corrigeNumero(argumentos.idade);
+    else console.log('O parâmetro idade da pessoa não foi informado, será usado valor padrão');
+
+    if (argumentos.altura) altura = argumentos.altura;
+    else console.log('O parâmetro altura da pessoa não foi informado, será usado valor padrão');
+
+    if (argumentos.peso) peso = argumentos.peso;
+    else console.log('O parâmetro peso da pessoa não foi informado, será usado valor padrão');
+} else {
+    console.log(`Os parâmetros '{"idade":0, "altura":0, "peso":0}' da pessoa não foram informados, será usado valores padrões`);
 }
+
 //  2. Obter idade da pessoa
-idadePessoa = (idadePessoa) || 25;
+idadePessoa = (idadePessoa) || 30;
 
 // 3. Finalizar se estiver fora do intervalo de idade
 if (!verificaIdade(idadePessoa)) {
-    throw new Error('Idade fora do intervalo permitido');
+    throw new Error('\nIdade fora do intervalo permitido');
 }
 
 // 4. Obter peso da pessoa
-peso = (peso) || 120;
+peso = (peso) || 80;
 
 // 5. Obter altura da pessoa  pode ser em numero inteiro, quebrado, em string separado por . ou virgula
-altura = (altura) || "1,240";
+altura = (altura) || "1,50";
 
 // Valida a altura da pessoa
 const alturaConvertida = corrigeNumero(altura);
 const pesoConvertido = corrigeNumero(peso);
 
+console.log(`\nArgumentos:\n\nIdade: ${idadePessoa}\nAltura: ${altura.toString().replace(',', '.')}\nPeso: ${peso.toString().replace(',', '.')}`);
+
 if (!validaAltura(alturaConvertida)) {
-    throw new Error('Altura fora do intervalo permitido');
+    throw new Error('\nAltura fora do intervalo permitido');
 }
 
 //  6. Calcular IMC 
