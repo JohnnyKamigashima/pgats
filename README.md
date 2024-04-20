@@ -1,2 +1,2 @@
-# TSBoilerplate
-Boilerplate para Typescript
+# PGATS
+Repositório de exercicios e materiais do PGATS
