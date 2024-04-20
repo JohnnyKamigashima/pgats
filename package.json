@@ -4,7 +4,7 @@
   "description": "Primeira aula de codificacao js no Pgats",
   "main": "index.js",
   "scripts": {
-    "test:watch": "node --watch ",
+    "test:web": "mocha --timeout 60000  tests/web/*.test.js",
     "IMC": "node src/exercicio01/exercicio01.js $1 $2 $3",
     "test": "mocha --watch tests/unit/*.test.js"
   },
@@ -13,6 +13,8 @@
   "devDependencies": {
     "mocha": "^10.4.0",
     "nodemon": "^3.1.0",
-    "nvm": "^0.0.4"
+    "nvm": "^0.0.4",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.19.0"
   }
 }

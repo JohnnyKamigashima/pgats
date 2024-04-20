@@ -4,11 +4,11 @@ const calculadora = new Calculadora();
 
 describe('Teste de calculadora', () => {
     const numerosTesteSoma = [[1, 1, 2], [1, 0, 1], [0, 1, 1], [0, 0, 0]]
-    const numerosTesteDivisao = [[1, 1, 1], [1, 0, Infinity], [0, 1, 0], [0, 0, NaN]]
+    const numerosTesteDivisao = [[1, 1, 1], [1, 0, Infinity], [0, 1, 0], [0, 0, NaN], [2, 2, 1], [3, 2, 1.5], [100, 3, 33.33]]
 
     for (let numero of numerosTesteSoma) {
         it(`Soma dois números ${numero[0]} + ${numero[1]} deve ser ${numero[2]}`, () => {
-            assert.equal(calculadora.somaDoisNumeros(numero[0], numero[1]), numero[2])
+            assert.equal(calculadora.somaDoisNumeros(numero[0], numero[1]).toFixed(2), numero[2])
         });
     }
 
