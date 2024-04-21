@@ -7,7 +7,8 @@
     "test:web": "mocha --timeout 30000  tests/web/*.test.js",
     "IMC": "bun run src/exercicio01/exercicio01.ts",
     "test:mocha": "mocha --watch tests/unit/*.test.js",
-    "test:bun": "bun test --watch"
+    "test:bun": "bun test --watch",
+    "MODULO3": "mocha --watch tests/conclusaoModulo3/*.test.js"
   },
   "author": "",
   "license": "ISC",
