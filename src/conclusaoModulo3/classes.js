@@ -4,12 +4,6 @@ class Casa {
     wc = 2
     #tensao = 220
 
-    constructor(cor, portas, wc) {
-        this.cor = cor
-        this.portas = portas
-        this.wc = wc
-    }
-
     get tensao() {
         return this.#tensao
     }

@@ -15,14 +15,11 @@ describe('Conclusão Módulo 3 - Lacos', () => {
     })
 
     it('Sorteie 24 numeros do BINGO', () => {
-        assert.ok(sorteieNumerosBingo(24).length === 24)
+        assert.equal(sorteieNumerosBingo(24).length, 24)
     })
 
     it('Mostre um numero enquanto for true', () => {
         assert.equal(mostreUmCaoEnquantoVerdade([true, true, true, true, false, true]), 4)
     })
 
-    it('Faz uma lista de ids de objetos', () => {
-        assert.strict(mapeiaId([{ id: 1, nome: 'Ciclano' }, { nome: 'Fulano', id: 2 }, { id: 3 }]), [1, 2, 3])
-    })
 })

@@ -46,7 +46,7 @@ const sorteieNumerosBingo = () => {
     let mensagem
 
     while (comprimento <= 23) {
-        comprimento = [...b, ...i, ...n, ...g, ...o].length
+        comprimento = b.length + i.length + n.length + g.length + o.length
         mensagem = `O ${comprimento} valor Sorteado é ${sorteado}`
 
         if (sorteado <= 15 && b.length < coluna) {
@@ -72,7 +72,7 @@ const sorteieNumerosBingo = () => {
     console.log(`N = ${n}`)
     console.log(`G = ${g}`)
     console.log(`O = ${o}`)
-    return [...b, ...i, ...n, ...g, ...o]
+    return (b + ',' + i + ',' + n + ',' + g + ',' + o).split(',')
 }
 
 const mostreUmCaoEnquantoVerdade = (lista) => {
@@ -84,7 +84,4 @@ const mostreUmCaoEnquantoVerdade = (lista) => {
     return contador
 }
 
-const mapeiaId = (json) => {
-    return json.map(item => item.id)
-}
-module.exports = { contaOvelhas, somaItensDaLista, mostrarResultados, sorteieNumerosBingo, mostreUmCaoEnquantoVerdade, mapeiaId }
+module.exports = { contaOvelhas, somaItensDaLista, mostrarResultados, sorteieNumerosBingo, mostreUmCaoEnquantoVerdade }
