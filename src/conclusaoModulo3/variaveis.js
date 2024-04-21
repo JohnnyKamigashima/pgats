@@ -26,7 +26,6 @@ const numeroNegativo = -10;
 const frase = 'Isso é uma string';
 const uuid = '5b0b6a6c-9e9b-4f6d-9b3f-6f4b5d6c7e8f';
 const stringNumerica = '10';
-const stringData = '10/10/2020';
 
 // Undefined - indica que a variável foi declarada mas não teve um valor definido
 
@@ -63,9 +62,6 @@ const matriz = [[1, 2], [3, 4], [5, 6]]
 const vetorObjeto = [{ nome: 'Fulano', idade: 20 }, { nome: 'Ciclano', idade: 30 }]
 const matrizObjeto = [[{ nome: 'Fulano', idade: 20 }, { nome: 'Ciclano', idade: 30 }], [{ nome: 'Beltrano', idade: 40 }, { nome: 'Deltrano', idade: 50 }]]
 
-// Variavel tipo Data
-const data = new Date('2020-10-10')
-
 module.exports = {
     booleanoVerdadeiro,
     booleanoFalso,
@@ -75,7 +71,6 @@ module.exports = {
     frase,
     uuid,
     stringNumerica,
-    stringData,
     indefinido,
     valornulo,
     animalEstimacao,
@@ -86,5 +81,4 @@ module.exports = {
     matriz,
     vetorObjeto,
     matrizObjeto,
-    data
 }

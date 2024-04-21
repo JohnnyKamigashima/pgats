@@ -47,9 +47,6 @@ describe('Conclusão Módulo 3 - Variáveis', () => {
     it('Verifica se a string numerica é igual a "10"', () => {
         assert.equal(stringNumerica, '10')
     })
-    it('Verifica se a string data é igual a "10/10/2020"', () => {
-        assert.equal(stringData, '10/10/2020')
-    })
     it('Verifica se o indefinido é igual a undefined', () => {
         assert.equal(indefinido, undefined)
     })
@@ -82,8 +79,5 @@ describe('Conclusão Módulo 3 - Variáveis', () => {
     })
     it('Verifica se a idade do segundo Objeto do segundo item da matriz de objeto é 50', () => {
         assert.equal(matrizObjeto[1][1].idade, 50)
-    })
-    it('Verifica se a data é igual a 10/10/2020', () => {
-        assert.deepStrictEqual(data, new Date(Date.parse('2020-10-10')))
     })
 })

@@ -5,14 +5,19 @@
  * While, Do...While.
  * Algumas classes possuem lacos incorporadas em seus métodos ou aceitam o uso de funções de callback que aplicam laços que fazem a iteração entre seus elementos como forEach e array.map.
  */
-const { faker } = require('@faker-js/faker')
+const nomesAleatorios = () => {
+    const listaNomes = ['Miguel', 'Davi', 'Arthur', 'Pedro', 'Gabriel', 'Bernardo', 'Lucas', 'Matheus', 'Rafael', 'Heitor', 'Enzo', 'Guilherme', 'Nicolas', 'Lorenzo', 'Gustavo', 'Felipe', 'Samuel', 'João Pedro', 'Daniel', 'Vitor', 'Leonardo', 'Henrique', 'Theo', 'Murilo', 'Eduardo', 'Pedro Henrique', 'Pietro', 'Cauã', 'Isaac', 'Caio', 'Vinicius', 'Benjamin', 'João', 'Lucca', 'João Miguel', 'Bryan', 'Joaquim', 'João Vitor', 'Thiago', 'Antônio', 'Davi Lucas', 'Francisco', 'Enzo Gabriel', 'Bruno', 'Emanuel', 'João Gabriel', 'Ian', 'Davi Luiz', 'Rodrigo', 'Otávio', 'Sophia', 'Alice', 'Julia', 'Isabella', 'Manuela', 'Laura', 'Luiza', 'Valentina', 'Giovanna', 'Maria Eduarda', 'Helena', 'Beatriz', 'Maria Luiza', 'Lara', 'Mariana', 'Nicole', 'Rafaela', 'Heloísa', 'Isadora', 'Lívia', 'Maria Clara', 'Ana Clara', 'Lorena', 'Gabriela', 'Yasmin', 'Isabelly', 'Sarah', 'Ana Julia', 'Letícia', 'Ana Luiza', 'Melissa', 'Marina', 'Clara', 'Cecília', 'Esther', 'Emanuelly', 'Rebeca', 'Ana Beatriz', 'Lavínia', 'Vitória', 'Bianca', 'Catarina', 'Larissa', 'Maria Fernanda', 'Fernanda', 'Amanda', 'Alícia', 'Carolina', 'Agatha', 'Gabrielly']
+    const numeroAleatorio = Math.floor(Math.random() * listaNomes.length)
+
+    return listaNomes[numeroAleatorio]
+}
 
 // For
 const contaOvelhas = (quantidadeDeOvelhas) => {
     let ovelhasContadas = 0
 
     for (let contador = 0; contador < quantidadeDeOvelhas; contador++) {
-        console.log(`Ovelha ${faker.person.firstName()} número ${contador + 1}`)
+        console.log(`Ovelha ${nomesAleatorios()} número ${contador + 1}`)
         ovelhasContadas = contador + 1
     }
     return ovelhasContadas
@@ -75,13 +80,13 @@ const sorteieNumerosBingo = () => {
     return (b + ',' + i + ',' + n + ',' + g + ',' + o).split(',')
 }
 
-const mostreUmCaoEnquantoVerdade = (lista) => {
+const mostreUmaPessoaEnquantoVerdade = (lista) => {
     let contador = 0
     do {
-        console.log(`Número ${Math.floor(Math.random() * 100)} ${faker.animal.dog()}`)
+        console.log(`Número ${Math.floor(Math.random() * 100)} ${nomesAleatorios()}`)
         contador++
     } while (lista[contador])
     return contador
 }
 
-module.exports = { contaOvelhas, somaItensDaLista, mostrarResultados, sorteieNumerosBingo, mostreUmCaoEnquantoVerdade }
+module.exports = { contaOvelhas, somaItensDaLista, mostrarResultados, sorteieNumerosBingo, mostreUmaPessoaEnquantoVerdade }

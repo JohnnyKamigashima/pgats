@@ -1,6 +1,6 @@
 const { describe, it } = require('mocha')
 const assert = require('node:assert')
-const { contaOvelhas, somaItensDaLista, mostrarResultados, sorteieNumerosBingo, mostreUmCaoEnquantoVerdade, mapeiaId } = require('../../src/conclusaoModulo3/lacos')
+const { contaOvelhas, somaItensDaLista, mostrarResultados, sorteieNumerosBingo, mostreUmaPessoaEnquantoVerdade } = require('../../src/conclusaoModulo3/lacos')
 describe('Conclusão Módulo 3 - Lacos', () => {
     it('Conta 33 ovelhas usando laços', () => {
         assert.equal(contaOvelhas(33), 33)
@@ -19,7 +19,7 @@ describe('Conclusão Módulo 3 - Lacos', () => {
     })
 
     it('Mostre um numero enquanto for true', () => {
-        assert.equal(mostreUmCaoEnquantoVerdade([true, true, true, true, false, true]), 4)
+        assert.equal(mostreUmaPessoaEnquantoVerdade([true, true, true, true, false, true]), 4)
     })
 
 })
