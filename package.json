@@ -13,12 +13,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
     "@types/bun": "latest",
     "cypress": "^13.8.0",
-    "faker": "^6.6.6",
     "mocha": "^10.4.0",
-    "nodemon": "^3.1.0",
     "nvm": "^0.0.4",
     "selenium-webdriver": "^4.19.0"
   },

@@ -9,8 +9,8 @@ const espere = async () => {
     return true
 }
 
-function raizQuadrada(x) {
-    return Math.sqrt(x);
+function raizQuadrada(valor) {
+    return Math.sqrt(valor);
 }
 
 module.exports = { espere, raizQuadrada }
