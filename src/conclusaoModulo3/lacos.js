@@ -83,4 +83,8 @@ const mostreUmCaoEnquantoVerdade = (lista) => {
     } while (lista[contador])
     return contador
 }
-module.exports = { contaOvelhas, somaItensDaLista, mostrarResultados, sorteieNumerosBingo, mostreUmCaoEnquantoVerdade }
+
+const mapeiaId = (json) => {
+    return json.map(item => item.id)
+}
+module.exports = { contaOvelhas, somaItensDaLista, mostrarResultados, sorteieNumerosBingo, mostreUmCaoEnquantoVerdade, mapeiaId }
